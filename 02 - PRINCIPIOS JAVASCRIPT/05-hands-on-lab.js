@@ -49,4 +49,3 @@ cont1.contar(); //emmanuel
 console.log('--sumo 1 a emmanuel--');
 console.log('Contador global = ' + Contador.contadorGlobal);
 console.log(cont1.getCuentaIndividual());
-console.log(cont1.getCuentaGlobal());
