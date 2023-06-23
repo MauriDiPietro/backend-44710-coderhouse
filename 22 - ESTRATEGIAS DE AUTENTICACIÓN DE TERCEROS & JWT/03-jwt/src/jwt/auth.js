@@ -22,6 +22,7 @@ export const generateToken = (user) =>{
 export const checkAuth = async (req, res, next) => {
     try {
         const authHeader = req.headers['authorization'];
+        // req.get('Authorization')
         if(!authHeader) return res.status(401).json({ msg: 'Unauthorized' });
         const token = authHeader.split(' ')[1];
         const decode = jwt.verify(token, PRIVATE_KEY);
