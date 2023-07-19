@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 export const productsCollection = 'products';
 
 export const productsSchema = new mongoose.Schema({
-  nameOfProd: { type: String, required: true },
+  name: { type: String, required: true },
   description: { type: String, required: true },
   price: { type: Number, required: true },
   stock: { type: Number, required: true },
