@@ -7,7 +7,7 @@ export const sendWS = async (req, res) => {
             body: req.body.message,
             from: process.env.CEL,
             to: req.body.dest,
-            // mediaUrl: ['https://res.cloudinary.com/hdsqazxtw/image/upload/v1600707758/coderhouse-logo.png']
+            mediaUrl: ['https://res.cloudinary.com/hdsqazxtw/image/upload/v1600707758/coderhouse-logo.png']
         };
         const response = await twilioClient.messages.create(message);
         res.json(response);
