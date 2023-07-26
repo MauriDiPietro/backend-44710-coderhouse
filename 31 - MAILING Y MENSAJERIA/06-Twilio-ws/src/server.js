@@ -1,5 +1,4 @@
 import express from 'express';
-
 import wsRouter from './routes/ws.router.js';
 
 const app = express();
