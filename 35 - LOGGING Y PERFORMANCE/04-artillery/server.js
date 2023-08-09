@@ -14,7 +14,7 @@ app.get("/operacion-simple", (req, res) => {
 
 app.get("/operacion-compleja", (req, res) => {
   let sum = 0;
-  for (let i = 0; i < 5000000000; i++) {
+  for (let i = 0; i < 5000000; i++) {
     sum += i;
   }
   res.json({ sum });
