@@ -2,7 +2,7 @@ import express from 'express';
 import morgan from 'morgan';
 import apiRouter from './routes/index.js';
 import { errorHandler } from './middlewares/errorHandler.js';
-import 'dotenv/config';
+import config from './config/config.js';
 
 const app = express();
 
@@ -14,6 +14,6 @@ app.use('/api', apiRouter);
 
 app.use(errorHandler);
 
-const PORT = process.env.PORT || 8080;
+const PORT = config.PORT;
 
 app.listen(PORT, () => console.log(`SERVER UP ON PORT ${PORT}`));
