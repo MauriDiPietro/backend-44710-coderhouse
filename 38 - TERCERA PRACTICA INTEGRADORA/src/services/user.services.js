@@ -1,5 +1,6 @@
 import Services from "./class.services.js";
 import factory from '../persistence/daos/factory.js';
+import { sendMail } from "../utils/mailing.service.js";
 const { userDao } = factory;
 
 export default class UserService extends Services {
@@ -10,6 +11,7 @@ export default class UserService extends Services {
   register = async (user) => {
     try {
       const response = await this.dao.register(user);
+      await sendMail(user);
       return response;
     } catch (error) {
       throw new Error(error.message);

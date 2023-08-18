@@ -8,6 +8,9 @@ router.get('/', controller.getAll);
 
 // router.get('/:id', controller.getById);
 
+//! con dto
+router.get('/:id', controller.getProdById);
+
 router.post('/', controller.createProd);
 
 router.put('/:id', controller.update);

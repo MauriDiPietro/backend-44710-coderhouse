@@ -9,7 +9,7 @@ export default class ProductService extends Services {
     super(productDao)
   }
 
-  createProd = async (obj) => {
+  async createProd(obj) {
     try {
       const newProd = await prodRepository.createProd(obj);
       if (!newProd) return false;
@@ -18,6 +18,17 @@ export default class ProductService extends Services {
       throw new Error(error.message)
     }
   }
+
+  async getProdById(id) {
+    try {
+      const prod = await prodRepository.getProdById(id);
+      if(!prod) return false;
+      else return prod;
+    } catch (error) {
+      throw new Error(error.message);
+    }
+  }
+
 }
 
 
