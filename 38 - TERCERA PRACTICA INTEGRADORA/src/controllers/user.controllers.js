@@ -43,5 +43,36 @@ export default class UserController extends Controllers{
     }
   }
 
+  resetPass = async (req, res, next) => {
+    try {
+      const user = req.user;
+      const tokenResetPass = await userService.resetPass(user); 
+      if(tokenResetPass) {
+        res.cookie('tokenpass', tokenResetPass) 
+        return httpResponse.Ok(res, {
+          msg: 'Email reset password send OK'
+        });
+      }
+      else return httpResponse.NotFound(res, 'email not send');
+    } catch (error) {
+      next(error.message);
+    }
+  };
+
+  async updatePass(req, res, next) {
+    try {
+      const user = req.user;
+      const { pass } = req.body;
+      const { tokenpass } = req.cookies;
+      if(!tokenpass) return httpResponse.Forbidden(res, errors.TOKEN_NOT_FOUND);
+      const updPass = await userService.updatePass(user, pass);
+      if(!updPass) return httpResponse.NotFound(res, errors.PASSWORD_EQUAL);
+      res.clearCookie('tokenpass');
+      return httpResponse.Ok(res, updPass);
+    } catch (error) {
+      next(error.message);
+    }
+  }
+
 }
 

@@ -14,18 +14,15 @@ export default class UserDaoMongo extends MongoDao {
   /**
    * Genera el token del usuario
    * @param {*} user
+   * @param {*} timeExp
    * @returns token
    */
-  #generateToken(user) {
+  generateToken(user, timeExp) {
     const payload = {
-      userId: user._id,
-      first_name: user.first_name,
-      last_name: user.last_name,
-      email: user.email,
-      age: user.age,
+      userId: user._id
     };
     const token = jwt.sign(payload, SECRET_KEY, {
-      expiresIn: "20m",
+      expiresIn: timeExp,
     });
     return token;
   }
@@ -34,13 +31,8 @@ export default class UserDaoMongo extends MongoDao {
     try {
       const { email, password } = user;
       const existUser = await this.model.findOne({email});
-      if(!existUser){
-          const newUser = await this.model.create({...user, password: createHash(password)})
-          // const token = this.#generateToken(newUser)
-          return newUser;
-      } else {
-        return false;
-      }
+      if(!existUser) return await this.model.create({...user, password: createHash(password)})
+      else return false;
     } catch (error) {
       throw new Error(error.message);
     }
@@ -53,10 +45,7 @@ export default class UserDaoMongo extends MongoDao {
       if(userExist){
         const passValid = isValidPassword(userExist, password)
         if(!passValid) return false
-        else {
-          const token = this.#generateToken(userExist)
-          return token;
-        }
+        else return this.#generateToken(userExist)
       } return false
     } catch (error) {
       throw new Error(error.message);
@@ -70,6 +59,28 @@ export default class UserDaoMongo extends MongoDao {
       if(userExist){
        return userExist
       } return false
+    } catch (error) {
+      throw new Error(error.message);
+    }
+  }
+
+  async resetPass(user){
+    try {
+      const { email } = user;
+      const userExist = await this.getByEmail(email);
+      if(userExist) return this.generateToken(userExist, '1h');
+      else return false;
+    } catch (error) {
+      throw new Error(error.message);
+    }
+  }
+
+  async updatePass(user, pass){
+    try {
+      const isEqual = isValidPassword(user, pass);  //la nueva contraseña es igual a la anterior
+      if(isEqual) return false;
+      const newPass = createHash(pass);
+      return await this.update(user._id, { password: newPass }); 
     } catch (error) {
       throw new Error(error.message);
     }

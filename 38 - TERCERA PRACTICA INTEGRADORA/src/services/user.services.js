@@ -26,5 +26,25 @@ export default class UserService extends Services {
       throw new Error(error.message);
     }
   };
+
+  resetPass = async (user) => {
+    try {
+      const token = await userDao.resetPass(user);
+      if(token) return await sendMail(user, 'resetPass', token);
+      else return false; 
+    } catch (error) {
+      throw new Error(error.message);
+    }
+  }
+
+  updatePass = async (user, pass)=>{
+    try {
+      const response = await userDao.updatePass(user, pass);
+      if(!response) return false;
+      return response;
+    } catch (error) {
+      throw new Error(error.message);
+    }
+  }
 }
 
