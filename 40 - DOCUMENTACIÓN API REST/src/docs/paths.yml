@@ -1,0 +1,28 @@
+paths:
+  /news:
+    post:
+      tags: 
+      - News
+      summary: Registro de noticia nueva en base de datos
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/parameters/schemas/BodyNewsPost'
+        required: true
+      responses:
+        200:
+          description: Se registró la noticia correctamente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schema/News/New'
+        404:
+          description: Error de validacion de schema
+          $ref: '#/components/schema/News/ValidationSchemaError'
+        500:
+          description: Error de servidor
+          $ref: '#/components/schema/News/NotFound'
+    get:
+    # put:
+    # delete:

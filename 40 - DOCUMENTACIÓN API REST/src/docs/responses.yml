@@ -1,0 +1,84 @@
+components:
+  schema:
+    News:
+      New:
+        type: object
+        properties:
+          id:
+            type: string
+            description: Id de la noticia
+          title:
+            type: string
+            description: Titulo de la noticia
+          body:
+            type: string
+            description: Contenido de la noticia
+          author:
+            type: string
+            description: Nombre del autor de la noticia
+          image:
+            type: string
+            description: Url de la imagen de la noticia
+          Date:
+            type: date
+            description: Fecha de publicación de la noticia
+        example:
+          id: 6ec0bd7f-11c0-43da-975e-2a8ad9ebae0b
+          title: Argentina Campeón del mundo!
+          body: Argentina se consagró campeon el mundo
+          Author: Gonzalo Bonadeo
+          Image: http://sdfsdf.com/sdfsdf.jpg
+          Date: 22/02/2023
+      GetAllNews:
+      
+        type: array
+        items:
+          properties:
+            id:
+              type: string
+              description: Id de la noticia
+              example: 6ec0bd7f-11c0-43da
+            title:
+              type: string
+              description: Titulo de la noticia
+              example: Argentina Campeón del mundo!
+            body:
+              type: string
+              description: Contenido de la noticia
+              example: Argentina se consagró campeon el mundo
+            author:
+              type: string
+              description: Nombre del autor de la noticia
+              example: Gonzalo Bonadeo
+            image:
+              type: string
+              description: Url de la imagen de la noticia
+              example: http://sdfsdf.com/sdfsdf.jpg
+            Date:
+              type: date
+              description: Fecha de publicación de la noticia
+              example: 22/02/2023
+      ValidationSchemaError:
+        type: object
+        properties:
+          message:
+            type: string
+            description: Mensaje de error de validación de schema
+        example:
+          message: "El schema de la noticia no es válido"
+      NotFound:
+        type: object
+        properties:
+          message:
+            type: string
+            description: Mensaje de error de servidor
+          example:
+            message: Error de servidor
+      ErrorGetById:
+        type: object
+        properties:
+          message:
+            type: string
+            description: Mensaje de error no se encuentra noticia
+        example:
+          message: No se encontró noticia con id ----

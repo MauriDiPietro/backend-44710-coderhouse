@@ -1,0 +1,25 @@
+[2023-08-22T20:30:52.000] [INFO] default - 🚀 Server started on port http://localhost:8080
+[2023-08-22T20:30:53.827] [INFO] default - Conectado a MongoDB!
+[2023-08-22T20:31:02.172] [INFO] default - GET /news
+[2023-08-22T20:31:44.468] [INFO] default - POST /news
+[2023-08-22T20:31:44.658] [FATAL] default - MongoServerError: E11000 duplicate key error collection: news.news index: title_1 dup key: { title: "Subió el precio del dólar en Argentina" }
+    at D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\40 - DOCUMENTACIÓN API REST\node_modules\mongodb\lib\operations\insert.js:53:33
+    at D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\40 - DOCUMENTACIÓN API REST\node_modules\mongodb\lib\cmap\connection_pool.js:333:25
+    at D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\40 - DOCUMENTACIÓN API REST\node_modules\mongodb\lib\sdam\server.js:210:17
+    at handleOperationResult (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\40 - DOCUMENTACIÓN API REST\node_modules\mongodb\lib\sdam\server.js:326:20)
+    at Connection.onMessage (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\40 - DOCUMENTACIÓN API REST\node_modules\mongodb\lib\cmap\connection.js:243:9)
+    at MessageStream.<anonymous> (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\40 - DOCUMENTACIÓN API REST\node_modules\mongodb\lib\cmap\connection.js:61:60)
+    at MessageStream.emit (events.js:375:28)
+    at processIncomingData (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\40 - DOCUMENTACIÓN API REST\node_modules\mongodb\lib\cmap\message_stream.js:125:16)
+    at MessageStream._write (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\40 - DOCUMENTACIÓN API REST\node_modules\mongodb\lib\cmap\message_stream.js:33:9)
+    at writeOrBuffer (internal/streams/writable.js:358:12) {
+  index: 0,
+  code: 11000,
+  keyPattern: { title: 1 },
+  keyValue: { title: 'Subió el precio del dólar en Argentina' },
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2023-08-22T20:31:53.068] [INFO] default - POST /news
+[2023-08-22T21:07:52.706] [INFO] default - 🚀 Server started on port http://localhost:8080
+[2023-08-22T21:07:54.490] [INFO] default - Conectado a MongoDB!
+[2023-08-22T21:09:20.197] [INFO] default - POST /news

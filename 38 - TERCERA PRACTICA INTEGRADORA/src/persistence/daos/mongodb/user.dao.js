@@ -45,7 +45,7 @@ export default class UserDaoMongo extends MongoDao {
       if(userExist){
         const passValid = isValidPassword(userExist, password)
         if(!passValid) return false
-        else return this.#generateToken(userExist)
+        else return this.generateToken(userExist)
       } return false
     } catch (error) {
       throw new Error(error.message);
