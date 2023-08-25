@@ -1,70 +1,73 @@
 paths:
+# se va a componer de cada path que tengamos, en este caso tenemos /news solamente
   /news:
+  # dentro de /news tenemos un post y un get
     post:
-      tags: 
+      tags: # con esta propiedad indicamos que pertenece a la entidad News
       - News
-      summary: Registro de noticia nueva en base de datos
-      requestBody:
+      summary: Registro de noticia nueva en base de datos.  # breve descripcion del endpoint
+      requestBody:  # lo que pasamos por body
         content:
           application/json:
-            schema:
+            schema: # utilizamos el schema de registro que creamos en el archivo requests
               $ref: '#/components/parameters/schemas/BodyNewsPost'
         required: true
-      responses:
+      responses:  # indicamos que tipos de respuestas podria tener
         200:
-          description: Se registró la noticia correctamente
-          content:
+          description: Se registró la noticia correctamente.
+          content: 
             application/json:
-              schema:
+              schema: # referenciamos el schema de respuesta que lo creamos en el archivo responses
                 $ref: '#/components/schema/News/New'
-        404:
-          description: Error de validacion de schema
-          $ref: '#/components/schema/News/ValidationSchemaError'
         500:
-          description: Error de servidor
+          description: error del servidor.
           $ref: '#/components/schema/News/NotFound'
+        404:
+          description: error de validacion del body.
+          $ref: '#/components/schema/News/ValidationSchemaError'
+    # pasamos al endpoint gegt, que sería el get all
     get:
-      tags:
+      tags: 
       - News
-      summary: Lista de noticias en base de datos
+      summary: Lista de noticias en base de datos.
       responses:
         200:
-          description: Lista de noticias
-          content:
+          description: Lista de noticias.
+          content: 
             application/json:
               schema:
-                $ref: '#/components/schema/News/GetAllNews'
+                $ref: '#/components/schema/News/getAllNews'
         500:
-          description: Error de servidor
+          description: error del servidor.
           $ref: '#/components/schema/News/NotFound'
-
-    # put:
-    # delete:
+  # tenemos otro path que es /news/id
   /news/{id}:
     get:
       tags:
       - News
-      summary: Listar noticias por id
+      summary: Listar noticias por id.
+      # en este caso tenemos un parametro en la url
       parameters:
         - in: path
           name: id
           required: true
-          description: id referente a la noticia
+          description: id references of new.
           schema:
             type: string
       responses:
         200:
-          description: Noticia encontrada
+          description: Noticia encontrada.
           content:
-          application/json:
-            schema:
-              $ref: '#/components/schema/News/New'
-        404:
-          description: Noticia no encontrada
-          content:
-          application/json:
-            schema:
-              $ref: '#/components/schema/News/ErrorGetById'
+            application/json:
+              schema:
+                $ref: '#/components/schema/News/New'
+          404:
+            description: No se encuentra noticia con id {id}
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schema/News/ErrorGetById'
+  # /news/{id}/:
     put:
       tags:
       - News

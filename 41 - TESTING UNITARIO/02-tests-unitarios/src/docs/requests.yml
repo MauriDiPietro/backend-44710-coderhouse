@@ -1,0 +1,33 @@
+components:
+  parameters:
+    schemas:
+    # vamos a crear el schema que vamos a utilizar para el post
+    # la estructura del body
+      BodyNewsPost: 
+        type: object  # indicamos que es de tipo objecto
+        required:     # los campos requeridos son:
+          - title
+          - body
+          - author
+          - image
+        properties:   # ahora vamos a indicar que tipo de dato tiene cada campo:
+          title:
+            type: string
+            description: Título de la noticia.  # podemos agregar una descripcion
+          body:
+            type: string
+            description: Cuerpo de la noticia.
+          author:
+            type: string
+            description: Autor de la noticia.
+          image:
+            type: string
+            description: Imagen de la noticia.
+            # tambien un ejemplo de un body válido
+        example:
+          title: ¡Argentina Campeón del mundo!
+          body: Argentina se consagró campeón del mundo tras vencer por penales a Francia.
+          author: Gonzalo Bonadeo
+          image: http://dfsdfs.com/fsdf.jpg
+# ahora vamos a crear los schema para lo que serian laa respuestas de todos los endpoints
+#! --> responses.yml

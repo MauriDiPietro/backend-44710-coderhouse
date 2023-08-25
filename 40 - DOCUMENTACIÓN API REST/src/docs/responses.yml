@@ -30,7 +30,6 @@ components:
           Image: http://sdfsdf.com/sdfsdf.jpg
           Date: 22/02/2023
       GetAllNews:
-      
         type: array
         items:
           properties:
@@ -80,5 +79,5 @@ components:
           message:
             type: string
             description: Mensaje de error no se encuentra noticia
-        example:
-          message: No se encontró noticia con id ----
+          example:
+            message: No se encontró noticia con id ----
