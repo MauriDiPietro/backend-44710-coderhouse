@@ -1,5 +1,7 @@
 paths:
+# se va a componer de cada path que tengamos, en este caso tenemos /news solamente
   /news:
+  # dentro de /news tenemos un post y un get
     post:
       tags: # con esta propiedad indicamos que pertenece a la entidad News
       - News

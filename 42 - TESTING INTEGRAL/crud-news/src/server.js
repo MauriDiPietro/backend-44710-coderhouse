@@ -5,6 +5,7 @@ import newsRouter from './routes/news.routes.js';
 import { logger } from './logs/news.logs.js';
 import { reqLog } from './middlewares/reqLog.js';
 
+
 import swaggerUI from 'swagger-ui-express';
 import swaggerJSDoc from 'swagger-jsdoc';
 

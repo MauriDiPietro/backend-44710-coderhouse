@@ -1,6 +1,8 @@
 components:
   parameters:
     schemas:
+    # vamos a crear el schema que vamos a utilizar para el post
+    # la estructura del body
       BodyNewsPost: 
         type: object  # indicamos que es de tipo objecto
         required:     # los campos requeridos son:
@@ -27,3 +29,5 @@ components:
           body: Argentina se consagró campeón del mundo tras vencer por penales a Francia.
           author: Gonzalo Bonadeo
           image: http://dfsdfs.com/fsdf.jpg
+# ahora vamos a crear los schema para lo que serian laa respuestas de todos los endpoints
+#! --> responses.yml
