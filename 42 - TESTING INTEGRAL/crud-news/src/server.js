@@ -5,17 +5,7 @@ import newsRouter from './routes/news.routes.js';
 import { logger } from './logs/news.logs.js';
 import { reqLog } from './middlewares/reqLog.js';
 
-
-import swaggerUI from 'swagger-ui-express';
-import swaggerJSDoc from 'swagger-jsdoc';
-
-import { info } from './docs/info.js';
-
 const app = express();
-
-const specs = swaggerJSDoc(info);
-
-app.use('/docs', swaggerUI.serve, swaggerUI.setup(specs));
 
 app.use(cors());
 app.use(express.json());
