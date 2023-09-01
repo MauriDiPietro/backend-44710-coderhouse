@@ -28,7 +28,8 @@ export const login = async(req, res, next)=>{
        }
        const access_token = generateToken(user)
        res
-            .header('Authorization', access_token)
+            // .header('Authorization', access_token)
+            .cookie('token', access_token, { httpOnly: true })
             .json({msg: 'Login OK', access_token})
     } catch (error) {
         next(error);

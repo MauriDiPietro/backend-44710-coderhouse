@@ -27,4 +27,6 @@ router.get('/private2', passport.authenticate('jwt'), (req, res)=> {
   res.send(req.user)
 })
 
+router.get('/private-cookies', passport.authenticate('jwtCookies'), (req, res) => res.send(req.user));
+
 export default router;

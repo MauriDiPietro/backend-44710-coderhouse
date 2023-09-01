@@ -77,4 +77,38 @@ describe('Tests integrales app News', ()=>{
         expect(statusCodeFail).toEqual(404);
         expect(responseFail).toEqual(expectedMsgError);
     })
+
+    test('[PUT] /news/:id', async()=>{
+        const responsePost = await request(app).post('/news').send(doc);
+        const id = responsePost.body._id;
+        expect(id).toBeDefined();
+        const docUpdated = {
+            title: 'title test updated',
+            body: 'body test updated',
+            author: 'Gonzalo Bonadeo Gomez',
+            image: '...'
+        }
+
+        const responsePut = await request(app).put(`/news/${id}`).send(docUpdated);
+        const statusCode = responsePut.status;
+        const idPut = responsePut.body._id;
+        expect(idPut).toBeDefined();
+        expect(statusCode).toBe(200);
+        const responsePutBody = responsePut.body.body;
+        expect(responsePutBody).toBe(docUpdated.body);
+
+    })
+
+    test('[DELETE] /news/:id', async()=>{
+        const responsePost = await request(app).post('/news').send(doc);
+        const id = responsePost.body._id;
+        expect(id).toBeDefined();
+        const responseDel = await request(app).delete(`/news/id/${id}`);
+        const statusCode = responseDel.statusCode;
+        expect(statusCode).toBe(200);
+        const responseGetById = await request(app).get(`/news/${id}`);
+        expect(responseGetById.statusCode).toBe(404);
+        expect(responseGetById.body.msg).toEqual(`No se encontró el id ${id} en la base de datos.`)
+
+    })
 })
