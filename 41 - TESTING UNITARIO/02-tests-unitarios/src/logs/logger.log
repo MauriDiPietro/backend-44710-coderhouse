@@ -1,0 +1,170 @@
+[2023-08-29T19:26:56.368] [INFO] default - Conectado a MongoDB!
+[2023-08-29T19:26:56.411] [INFO] default - se limpió la base de datos
+[2023-08-29T19:31:51.088] [INFO] default - Conectado a MongoDB!
+[2023-08-29T19:31:51.122] [INFO] default - se limpió la base de datos
+[2023-08-29T19:32:19.658] [INFO] default - Conectado a MongoDB!
+[2023-08-29T19:32:19.702] [INFO] default - se limpió la base de datos
+[2023-08-29T19:33:25.308] [INFO] default - Conectado a MongoDB!
+[2023-08-29T19:33:38.244] [INFO] default - Conectado a MongoDB!
+[2023-08-29T19:33:38.271] [INFO] default - se limpió la base de datos
+[2023-08-29T19:37:37.873] [INFO] default - Conectado a MongoDB!
+[2023-08-29T19:37:37.933] [INFO] default - se limpió la base de datos
+[2023-08-29T19:39:45.328] [INFO] default - Conectado a MongoDB!
+[2023-08-29T19:39:45.387] [INFO] default - se limpió la base de datos
+[2023-08-29T19:42:12.314] [INFO] default - Conectado a MongoDB!
+[2023-08-29T19:42:12.355] [INFO] default - se limpió la base de datos
+[2023-08-29T19:42:27.403] [INFO] default - Conectado a MongoDB!
+[2023-08-29T19:42:27.455] [INFO] default - se limpió la base de datos
+[2023-08-29T19:42:27.568] [FATAL] default - MongoServerError: E11000 duplicate key error collection: coderhouse.news index: title_1 dup key: { title: "International Grupo Arquitecto" }
+    at D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\operations\insert.js:53:33
+    at D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\connection_pool.js:333:25
+    at D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\sdam\server.js:210:17
+    at handleOperationResult (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\sdam\server.js:326:20)
+    at Connection.onMessage (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\connection.js:243:9)
+    at MessageStream.<anonymous> (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\connection.js:61:60)
+    at MessageStream.emit (node:events:514:28)
+    at processIncomingData (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\message_stream.js:125:16)
+    at MessageStream._write (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\message_stream.js:33:9)
+    at writeOrBuffer (node:internal/streams/writable:392:12) {
+  index: 0,
+  code: 11000,
+  keyPattern: { title: 1 },
+  keyValue: { title: 'International Grupo Arquitecto' },
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2023-08-29T19:42:27.591] [FATAL] default - MongoServerError: E11000 duplicate key error collection: coderhouse.news index: title_1 dup key: { title: "International Grupo Arquitecto" }
+    at D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\operations\insert.js:53:33
+    at D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\connection_pool.js:333:25
+    at D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\sdam\server.js:210:17
+    at handleOperationResult (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\sdam\server.js:326:20)
+    at Connection.onMessage (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\connection.js:243:9)
+    at MessageStream.<anonymous> (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\connection.js:61:60)
+    at MessageStream.emit (node:events:514:28)
+    at processIncomingData (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\message_stream.js:125:16)
+    at MessageStream._write (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\message_stream.js:33:9)
+    at writeOrBuffer (node:internal/streams/writable:392:12) {
+  index: 0,
+  code: 11000,
+  keyPattern: { title: 1 },
+  keyValue: { title: 'International Grupo Arquitecto' },
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2023-08-29T19:42:56.747] [INFO] default - Conectado a MongoDB!
+[2023-08-29T19:42:56.789] [INFO] default - se limpió la base de datos
+[2023-08-29T19:42:56.878] [FATAL] default - MongoServerError: E11000 duplicate key error collection: coderhouse.news index: title_1 dup key: { title: "Distrito Web Especialista" }
+    at D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\operations\insert.js:53:33
+    at D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\connection_pool.js:333:25
+    at D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\sdam\server.js:210:17
+    at handleOperationResult (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\sdam\server.js:326:20)
+    at Connection.onMessage (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\connection.js:243:9)
+    at MessageStream.<anonymous> (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\connection.js:61:60)
+    at MessageStream.emit (node:events:514:28)
+    at processIncomingData (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\message_stream.js:125:16)
+    at MessageStream._write (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\message_stream.js:33:9)
+    at writeOrBuffer (node:internal/streams/writable:392:12) {
+  index: 0,
+  code: 11000,
+  keyPattern: { title: 1 },
+  keyValue: { title: 'Distrito Web Especialista' },
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2023-08-29T19:42:56.901] [FATAL] default - MongoServerError: E11000 duplicate key error collection: coderhouse.news index: title_1 dup key: { title: "Distrito Web Especialista" }
+    at D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\operations\insert.js:53:33
+    at D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\connection_pool.js:333:25
+    at D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\sdam\server.js:210:17
+    at handleOperationResult (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\sdam\server.js:326:20)
+    at Connection.onMessage (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\connection.js:243:9)
+    at MessageStream.<anonymous> (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\connection.js:61:60)
+    at MessageStream.emit (node:events:514:28)
+    at processIncomingData (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\message_stream.js:125:16)
+    at MessageStream._write (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\message_stream.js:33:9)
+    at writeOrBuffer (node:internal/streams/writable:392:12) {
+  index: 0,
+  code: 11000,
+  keyPattern: { title: 1 },
+  keyValue: { title: 'Distrito Web Especialista' },
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2023-08-29T19:43:38.589] [INFO] default - Conectado a MongoDB!
+[2023-08-29T19:43:38.628] [INFO] default - se limpió la base de datos
+[2023-08-29T19:43:38.754] [FATAL] default - MongoServerError: E11000 duplicate key error collection: coderhouse.news index: title_1 dup key: { title: "Corporativo Factores Gerente" }
+    at D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\operations\insert.js:53:33
+    at D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\connection_pool.js:333:25
+    at D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\sdam\server.js:210:17
+    at handleOperationResult (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\sdam\server.js:326:20)
+    at Connection.onMessage (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\connection.js:243:9)
+    at MessageStream.<anonymous> (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\connection.js:61:60)
+    at MessageStream.emit (node:events:514:28)
+    at processIncomingData (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\message_stream.js:125:16)
+    at MessageStream._write (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\message_stream.js:33:9)
+    at writeOrBuffer (node:internal/streams/writable:392:12) {
+  index: 0,
+  code: 11000,
+  keyPattern: { title: 1 },
+  keyValue: { title: 'Corporativo Factores Gerente' },
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2023-08-29T19:44:17.063] [INFO] default - Conectado a MongoDB!
+[2023-08-29T19:44:17.099] [INFO] default - se limpió la base de datos
+[2023-08-29T19:44:17.235] [FATAL] default - MongoServerError: E11000 duplicate key error collection: coderhouse.news index: title_1 dup key: { title: "Cliente Infraestructura Planificador" }
+    at D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\operations\insert.js:53:33
+    at D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\connection_pool.js:333:25
+    at D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\sdam\server.js:210:17
+    at handleOperationResult (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\sdam\server.js:326:20)
+    at Connection.onMessage (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\connection.js:243:9)
+    at MessageStream.<anonymous> (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\connection.js:61:60)
+    at MessageStream.emit (node:events:514:28)
+    at processIncomingData (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\message_stream.js:125:16)
+    at MessageStream._write (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\message_stream.js:33:9)
+    at writeOrBuffer (node:internal/streams/writable:392:12) {
+  index: 0,
+  code: 11000,
+  keyPattern: { title: 1 },
+  keyValue: { title: 'Cliente Infraestructura Planificador' },
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2023-08-29T19:44:56.179] [INFO] default - Conectado a MongoDB!
+[2023-08-29T19:44:56.222] [INFO] default - se limpió la base de datos
+[2023-08-29T19:47:35.387] [INFO] default - Conectado a MongoDB!
+[2023-08-29T19:47:35.421] [INFO] default - se limpió la base de datos
+[2023-08-29T19:48:06.335] [INFO] default - Conectado a MongoDB!
+[2023-08-29T19:48:06.380] [INFO] default - se limpió la base de datos
+[2023-08-29T19:48:06.483] [FATAL] default - MongoServerError: E11000 duplicate key error collection: coderhouse.news index: title_1 dup key: { title: "Futuro Respuesta Asistente" }
+    at D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\operations\insert.js:53:33
+    at D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\connection_pool.js:333:25
+    at D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\sdam\server.js:210:17
+    at handleOperationResult (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\sdam\server.js:326:20)
+    at Connection.onMessage (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\connection.js:243:9)
+    at MessageStream.<anonymous> (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\connection.js:61:60)
+    at MessageStream.emit (node:events:514:28)
+    at processIncomingData (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\message_stream.js:125:16)
+    at MessageStream._write (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\message_stream.js:33:9)
+    at writeOrBuffer (node:internal/streams/writable:392:12) {
+  index: 0,
+  code: 11000,
+  keyPattern: { title: 1 },
+  keyValue: { title: 'Futuro Respuesta Asistente' },
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2023-08-29T19:48:06.534] [FATAL] default - MongoServerError: E11000 duplicate key error collection: coderhouse.news index: title_1 dup key: { title: "Futuro Respuesta Asistente" }
+    at D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\operations\insert.js:53:33
+    at D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\connection_pool.js:333:25
+    at D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\sdam\server.js:210:17
+    at handleOperationResult (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\sdam\server.js:326:20)
+    at Connection.onMessage (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\connection.js:243:9)
+    at MessageStream.<anonymous> (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\connection.js:61:60)
+    at MessageStream.emit (node:events:514:28)
+    at processIncomingData (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\message_stream.js:125:16)
+    at MessageStream._write (D:\CODERHOUSE\BACKEND\backend-44710-coderhouse\41 - TESTING UNITARIO\02-tests-unitarios\node_modules\mongodb\lib\cmap\message_stream.js:33:9)
+    at writeOrBuffer (node:internal/streams/writable:392:12) {
+  index: 0,
+  code: 11000,
+  keyPattern: { title: 1 },
+  keyValue: { title: 'Futuro Respuesta Asistente' },
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2023-08-29T19:48:38.617] [INFO] default - Conectado a MongoDB!
+[2023-08-29T19:48:59.536] [INFO] default - Conectado a MongoDB!
+[2023-08-29T19:48:59.604] [INFO] default - se limpió la base de datos
+[2023-08-29T19:50:22.487] [INFO] default - Conectado a MongoDB!
+[2023-08-29T19:50:22.573] [INFO] default - se limpió la base de datos
