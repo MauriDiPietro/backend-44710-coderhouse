@@ -1,6 +1,0 @@
-[2023-08-03T19:46:40.244] [TRACE] default - mensaje con nivel trace
-[2023-08-03T19:46:40.245] [DEBUG] default - mensaje con nivel debug
-[2023-08-03T19:46:40.246] [INFO] default - mensaje con nivel info
-[2023-08-03T19:46:40.246] [WARN] default - mensaje con nivel warn
-[2023-08-03T19:46:40.246] [ERROR] default - mensaje con nivel error
-[2023-08-03T19:46:40.246] [FATAL] default - mensaje con nivel fatal

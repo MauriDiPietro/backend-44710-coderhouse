@@ -1,8 +1,0 @@
-version: "2.20.3"
-services:
-  mongo-docker:
-    image: mongo
-    ports:
-      - "27020:27017"
-    volumes:
-      - "/d/DOCKER/MONGO/mongo-docker:/data/db"

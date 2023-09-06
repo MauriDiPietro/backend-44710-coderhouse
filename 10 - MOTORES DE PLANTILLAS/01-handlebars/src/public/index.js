@@ -1,1 +1,0 @@
-console.log('archivo js desde handlebars');
